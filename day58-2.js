@@ -27,14 +27,16 @@
 
 
 function maxProfit(prices) {
-let maxProfit=0
+    let maxProfit = 0;
 
-for(let i=1;i<prices.length;i++){
-  if(prices[i]>prices[i-1]){
-    maxProfit+=prices[i]-prices[i-1]
-  }
-}
-return maxProfit
+    for (let i = 1; i < prices.length; i++) {
+        // If the current price is higher than the previous day's price, add the difference to the profit
+        if (prices[i] > prices[i - 1]) {
+            maxProfit += prices[i] - prices[i - 1];
+        }
+    }
+
+    return maxProfit;
 }
 
 // Example usage:
